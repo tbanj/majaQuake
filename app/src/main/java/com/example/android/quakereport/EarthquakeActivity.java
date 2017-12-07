@@ -15,8 +15,12 @@
  */
 package com.example.android.quakereport;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -46,7 +50,7 @@ public class EarthquakeActivity extends AppCompatActivity {
 
         // Find a reference to the {@link ListView} in the layout
         //ListView earthquakeListView = (ListView) findViewById(R.id.list);
-        QuakeAdapter itemsAdapter =new QuakeAdapter(this,earthquakes);
+         final QuakeAdapter itemsAdapter =new QuakeAdapter(this,earthquakes);
 
         /* Create a new {@link ArrayAdapter} of earthquakes
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -56,6 +60,22 @@ public class EarthquakeActivity extends AppCompatActivity {
         // so the list can be populated in the user interface
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                // Find the current earthquake that was clicked on
+                quakes currentEarthquake = itemsAdapter.getItem(position);
+
+                // Convert the String URL into a URI object (to pass into the Intent constructor)
+                Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
+
+                // Create a new intent to view the earthquake URI
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);
+
+                // Send the intent to launch a new activity
+                startActivity(websiteIntent);
+            }
+        });
     }
 
 

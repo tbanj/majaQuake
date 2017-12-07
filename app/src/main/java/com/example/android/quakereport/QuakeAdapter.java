@@ -22,7 +22,7 @@ import java.util.Date;
 
 public class QuakeAdapter extends ArrayAdapter<quakes> {
     /*Resource id for background color for the list of words in this category*/
-    private double mMagnitude;
+
 
 
     /**
@@ -110,7 +110,10 @@ public class QuakeAdapter extends ArrayAdapter<quakes> {
         String formattedDate = formatDate(dateObject);
         dateTextView.setText(formattedDate);
 
-
+        //url
+        //TextView urlTextView = (TextView) listItemView.findViewById(R.id.url);
+        String formattedUrl = currentforcast.getUrl();
+        //urlTextView.setText(formattedUrl);
         // Find the TextView in the list_item.xml layout with the ID default_text_view
         TextView timeTextView = (TextView) listItemView.findViewById(R.id.time);
         // Get the TIME from the current Word object and

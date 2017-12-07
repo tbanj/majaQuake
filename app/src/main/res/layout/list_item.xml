@@ -83,9 +83,7 @@
             android:layout_gravity="end"
             android:textColor="@color/textColorEarthquakeDetails"
             android:textSize="12sp"
-
             tools:text="Oct 30, 2011"
-
             />
 
         <TextView
@@ -95,13 +93,13 @@
             android:layout_gravity="end"
             android:textColor="@color/textColorEarthquakeDetails"
             android:textSize="12sp"
-
             tools:text="9:10pm"
-
             />
+
 
     </LinearLayout>
 
 
 
 </LinearLayout>
+

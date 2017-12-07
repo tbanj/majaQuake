@@ -69,8 +69,12 @@ public final class QueryUtils {
 
                 Long time = jsonProperties.getLong("time");
 
-                //System.out.println("time: "+ jsonTime);
-                quakes earthquake = new quakes(magnitude, location, time );
+                // Extract the value for the key called "url"
+                String url = jsonProperties.getString("url");
+
+                // Create a new {@link quakes} object with the magnitude, location, time,
+                // and url from the JSON response.
+                quakes earthquake = new quakes(magnitude, location, time, url );
                 earthquakes.add(earthquake);
 
 

@@ -22,6 +22,9 @@ public class quakes {
 
     private Long mtimeInMilliseconds;
 
+    /** Website URL of the earthquake */
+    private String mUrl;
+
 
 
     /**
@@ -35,11 +38,11 @@ public class quakes {
 
 
     /**This is also known as state when a variable is declare */
-    public quakes(double quakefelt, String quakeCity, Long timeInMilliseconds){
+    public quakes(double quakefelt, String quakeCity, Long timeInMilliseconds, String url){
         mQuakeFelt = quakefelt;
         mQuakeCity= quakeCity;
         mtimeInMilliseconds =timeInMilliseconds;
-
+        mUrl =url;
 
     }
 
@@ -71,6 +74,8 @@ public class quakes {
         return mtimeInMilliseconds;
     }
 
-
+    public String getUrl() {
+        return mUrl;
+    }
 
 }
