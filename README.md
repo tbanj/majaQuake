@@ -1,8 +1,8 @@
-Quake Report App
+Maja Quake App
 ===================================
-
-This app displays a list of recent earthquakes in the world
-from the U.S. Geological Survey (USGS) organization.
+This is an app which inform users about state and country which currently 
+experiencing Earthquake and location which experiencing presently.
+Its data source is from the U.S. Geological Survey (USGS) organization.
 
 Used in a Udacity course in the Beginning Android Nanodegree.
 
@@ -16,11 +16,40 @@ Pre-requisites
 - Android Build Tools v23.0.2
 - Android Support Repository v23.3.0
 
-Getting Started
----------------
+------------------------------------------
+# Classes
+This project have 7 java classes
+1. AboutActivity
+2. EarthquakeActivity
+3. EarthquakeLoader
+4. Quake
+5. QuakeAdapter
+6. QueryUtils
+7. SettingsActivity
 
-This sample uses the Gradle build system. To build this project, use the
-"gradlew build" command or use "Import Project" in Android Studio.
+# Layouts
+This project have 4 major Layouts
+1. About Layout
+2. Earthquake Layout
+3. List Item Layout
+4. Settings Layout
+
+
+# Click on Google Drive Icon Below to download apk
+[<img src="scrs/google_drive.png">](https://goo.gl/a6ELYJ)
+
+
+# Screenshots
+<img src="scrs/home_activity.png" alt="Earthquake Realtime Report" width="288" height="512">&nbsp;
+<img src="scrs/settings_activity.png" alt="Earthquake Settings" width="288" height="512">&nbsp;
+<img src="scrs/about_activity.png" alt="About the Developer" width="288" height="512">&nbsp;
+<img src="scrs/network_activity.png" alt="No Connection Detected" width="288" height="512">&nbsp;
+
+
+
+
+# Author : Alabi Temitope [<img src="scrs/linkedin-icon.png">](https://www.linkedin.com/in/alabi-temitope-aa036b103/)
+
 
 Support
 -------
