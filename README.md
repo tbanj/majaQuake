@@ -4,10 +4,6 @@ This is an app which inform users about state and country which currently
 experiencing Earthquake and location which experiencing presently.
 Its data source is from the U.S. Geological Survey (USGS) organization.
 
-Used in a Udacity course in the Beginning Android Nanodegree.
-
-More info on the USGS Earthquake API available at:
-https://earthquake.usgs.gov/fdsnws/event/1/
 
 Pre-requisites
 --------------
